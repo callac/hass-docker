@@ -1,9 +1,9 @@
 # Home Assistant for China
 
 ### 预装集成
-> 本镜像每日更新，[可用标签](https://github.com/hasscc/hass-docker/pkgs/container/hacn/versions?filters[version_type]=tagged)有`stable`、`latest`、`dev`及月度版本如`2024.9`
+> 本镜像每日更新，[可用标签](https://github.com/callac/hass-docker/pkgs/container/hacn/versions?filters[version_type]=tagged)有`stable`、`latest`、`dev`及月度版本如`2024.9`
 >
-> 如果想要加载项功能，可以使用[hass-super](https://github.com/hasscc/hass-super)，或使用[内置扩展](#addons)镜像
+> 如果想要加载项功能，可以使用[hass-super](https://github.com/callac/hass-super)，或使用[内置扩展](#addons)镜像
 >
 > HA启动时会逐个检测是否安装以下集成，如果没有则自动安装，已安装不会覆盖
 
@@ -24,8 +24,8 @@
 
 
 ### 可用镜像
-* ghcr.nju.edu.cn/hasscc/hacn
-* registry.cn-hangzhou.aliyuncs.com/hasscc/hacn
+* ghcr.nju.edu.cn/callac/hacn
+* registry.cn-hangzhou.aliyuncs.com/callac/hacn
 * hacn/hacn
 
 ### 可用标签
@@ -50,7 +50,7 @@ docker run -d \
   -e TZ=Asia/Shanghai \
   -e ALWAYS_INSTALL=true \
   --network=host \
-  ghcr.nju.edu.cn/hasscc/hacn:stable
+  ghcr.nju.edu.cn/callac/hacn:stable
 ```
 
 ### Compose 安装
@@ -60,7 +60,7 @@ docker run -d \
 services:
   homeassistant:
     container_name: homeassistant
-    image: ghcr.nju.edu.cn/hasscc/hacn:stable
+    image: ghcr.nju.edu.cn/callac/hacn:stable
     volumes:
       - /PATH_TO_YOUR_CONFIG:/config
       - /etc/localtime:/etc/localtime:ro
@@ -104,4 +104,4 @@ services:
 
 ### 相关链接
 - [DockerHub](https://hub.docker.com/r/hacn/hacn)
-- [Dockerfile](https://github.com/hasscc/hass-docker/blob/main/Dockerfile)
+- [Dockerfile](https://github.com/callac/hass-docker/blob/main/Dockerfile)
