@@ -12,7 +12,7 @@ on:
 
 env:
   DOCKERHUB_REPO: ${{ secrets.HACN_USERNAME }}/hacn
-  GITHUB_CR_REPO: ghcr.io/hasscc/hacn
+  GITHUB_CR_REPO: ghcr.io/callac/hacn
 
 jobs:
   build:
@@ -125,5 +125,5 @@ jobs:
 
       - name: Pull images
         run: |
-          docker pull ghcr.nju.edu.cn/hasscc/hacn:stable
-          docker pull ghcr.nju.edu.cn/hasscc/hacn:addons
+          docker pull ghcr.nju.edu.cn/callac/hacn:stable
+          docker pull ghcr.nju.edu.cn/callac/hacn:addons
