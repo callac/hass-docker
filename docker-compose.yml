@@ -5,7 +5,7 @@ services:
     build:
       context: .
     volumes:
-      - /PATH_TO_YOUR_CONFIG:/config
+      - ./config:/config
       - /etc/localtime:/etc/localtime:ro
       - /run/dbus:/run/dbus:ro
     environment:
